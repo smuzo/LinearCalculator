@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.calculate.setOnClickListener { calculator() }
+        binding.costOfService.setOnKeyListener { view, keyCode, _ -> handleKeyEvent(view,keyCode) }
     }
 
     private fun calculator() {
